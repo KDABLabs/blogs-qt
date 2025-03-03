@@ -93,8 +93,6 @@ public:
     // the default is "copy only", change it
     Qt::DropActions supportedDragActions() const override { return Qt::MoveAction | Qt::CopyAction; }
 
-    QStringList mimeTypes() const override { return {QString::fromLatin1(s_emailsMimeType)}; }
-
     QMimeData *mimeData(const QModelIndexList &indexes) const override
     {
         QSet<int> seenRows;
