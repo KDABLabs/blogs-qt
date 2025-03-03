@@ -132,7 +132,6 @@ public:
     void fillEmailsList(EmailFolder &folder);
 
 protected:
-    QStringList mimeTypes() const override { return {QString::fromLatin1(s_emailsMimeType)}; }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     QMimeData *mimeData(const QList<QTableWidgetItem *> &items) const override;
 #else
